@@ -1,6 +1,6 @@
 import React from 'react'
 
-const UserShow = () => {
+const UserShow: React.FC = () => {
   return <div>User詳細ページです</div>
 }
 

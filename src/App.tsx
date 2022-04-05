@@ -1,9 +1,7 @@
 import React from 'react'
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Link } from 'react-router-dom'
+import Routes from './routes'
 import './App.css'
-import PostIndex from './pages/posts/PostIndex'
-import UserIndex from './pages/users/UserIndex'
-// import UserShow from './pages/users/UserShow'
 
 const App: React.FC = () => {
   return (
@@ -15,14 +13,7 @@ const App: React.FC = () => {
         <br />
         <Link to="/posts">ポスト一覧</Link>
       </div>
-      <Switch>
-        <Route exact path="/users">
-          <UserIndex />
-        </Route>
-        <Route exact path="/posts">
-          <PostIndex />
-        </Route>
-      </Switch>
+      <Routes />
     </BrowserRouter>
   )
 }

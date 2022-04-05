@@ -1,9 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import UserIndex from '../pages/users/UserIndex'
-import UserShow from '../pages/users/UserShow'
-import UserAvatarIndex from '../pages/users/UserAvatarIndex'
-import PostIndex from '../pages/posts/PostIndex'
+import UsersRoutes from './UsersRoutes'
+import PostsRoutes from './PostsRoutes'
 
 const index: React.FC = () => {
   return (
@@ -12,13 +10,32 @@ const index: React.FC = () => {
         path="/users"
         render={({ match: { url } }) => (
           <Switch>
-            <Route exact path={url} component={UserIndex} />
-            <Route path={`${url}/show`} component={UserShow} />
-            <Route path={`${url}/avatars`} component={UserAvatarIndex} />
+            {UsersRoutes.map((route) => (
+              <Route
+                key={route.path}
+                exact={route.exaxt}
+                path={`${url}${route.path}`}
+                component={route.component}
+              />
+            ))}
           </Switch>
         )}
       />
-      <Route path="/posts" render={() => <PostIndex />} />
+      <Route
+        path="/posts"
+        render={({ match: { url } }) => (
+          <Switch>
+            {PostsRoutes.map((route) => (
+              <Route
+                key={route.path}
+                exact={route.exaxt}
+                path={`${url}${route.path}`}
+                component={route.component}
+              />
+            ))}
+          </Switch>
+        )}
+      />
     </Switch>
   )
 }

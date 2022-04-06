@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import PostList from '../../components/PostList'
 import { PostsType } from '../../types/PostsType'
 
 const PostIndex: React.FC = () => {
@@ -16,7 +17,7 @@ const PostIndex: React.FC = () => {
       {posts ? (
         <ul>
           {posts.map((post) => (
-            <li key={post.id}>{post.title}</li>
+            <PostList key={post.id} post={post} />
           ))}
         </ul>
       ) : (

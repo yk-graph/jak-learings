@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import UserList from '../../components/UserList'
 import { UsersType } from '../../types/UsersType'
 
 const UserIndex: React.FC = () => {
@@ -23,7 +24,7 @@ const UserIndex: React.FC = () => {
       {users ? (
         <ul>
           {users.map((user) => (
-            <li key={user.id}>{user.name}</li>
+            <UserList key={user.id} user={user} />
           ))}
         </ul>
       ) : (

@@ -1,12 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Routes from './routes'
+import { BrowserRouter, Link } from 'react-router-dom'
 import './index.css'
-import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <div className="App">
+        <Link to="/">TOPページ</Link>
+        <br />
+        <Link to="/users">ユーザー一覧</Link>
+        <br />
+        <Link to="/posts">ポスト一覧</Link>
+      </div>
+      <Routes />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

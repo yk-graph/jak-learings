@@ -10,8 +10,8 @@ const UsersRoutes: RouteType[] = [
     component: UserIndex,
   },
   {
-    path: '/show',
-    exaxt: true,
+    path: '/:id',
+    exaxt: false,
     component: UserShow,
   },
   {

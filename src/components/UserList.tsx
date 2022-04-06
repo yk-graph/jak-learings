@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { UsersType } from '../types/UsersType'
 
 interface Props {
@@ -7,8 +8,12 @@ interface Props {
 
 const PostList: React.FC<Props> = (props) => {
   const { id, name } = props.user
+  const history = useHistory()
+
+  const toShowPage = () => history.push(`/users/${id}`)
+
   return (
-    <li>
+    <li onClick={toShowPage}>
       No.{id}
       <div>名前：{name}</div>
     </li>

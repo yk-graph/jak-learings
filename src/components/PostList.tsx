@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import { PostsType } from '../types/PostsType'
 
 interface Props {
-  post: Omit<PostsType, 'userId'>
+  post: PostsType
 }
 
 const PostList: React.FC<Props> = (props) => {
   const { id, title, body } = props.post
   return (
-    <Link to={`/posts/${id}`}>
+    <Link to={{ pathname: `/posts/${id}`, state: props.post }}>
       <li>
         <h4>
           No.{id}: {title}

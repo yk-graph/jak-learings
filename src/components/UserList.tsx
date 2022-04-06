@@ -10,7 +10,8 @@ const PostList: React.FC<Props> = (props) => {
   const { id, name } = props.user
   const history = useHistory()
 
-  const toShowPage = () => history.push(`/users/${id}`)
+  const toShowPage = () =>
+    history.push({ pathname: `/users/${id}`, state: props.user })
 
   return (
     <li onClick={toShowPage}>

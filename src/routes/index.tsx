@@ -2,8 +2,8 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import UsersRoutes from './UsersRoutes'
 import PostsRoutes from './PostsRoutes'
-import App from '../App'
-import Page404 from '../Page404'
+import Top from '../components/pages/Top'
+import Page404 from '../components/pages/Page404'
 
 const index: React.FC = () => {
   return (
@@ -38,7 +38,7 @@ const index: React.FC = () => {
           </Switch>
         )}
       />
-      <Route path="/" exact component={App} />
+      <Route path="/" exact component={Top} />
       <Route path="*" component={Page404} />
     </Switch>
   )

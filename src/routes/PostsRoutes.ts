@@ -1,5 +1,5 @@
-import PostIndex from '../pages/posts/PostIndex'
-import PostShow from '../pages/posts/PostShow'
+import PostIndex from '../components/pages/posts/PostIndex'
+import PostShow from '../components/pages/posts/PostShow'
 import { RouteType } from '../types/RouteType'
 
 const PostsRoutes: RouteType[] = [

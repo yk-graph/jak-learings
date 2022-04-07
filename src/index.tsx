@@ -1,20 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Routes from './routes'
-import { BrowserRouter, Link } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
+import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="App">
-        <Link to="/">TOPページ</Link>
-        <br />
-        <Link to="/users">ユーザー一覧</Link>
-        <br />
-        <Link to="/posts">ポスト一覧</Link>
-      </div>
+      <App />
       <Routes />
     </BrowserRouter>
   </React.StrictMode>,

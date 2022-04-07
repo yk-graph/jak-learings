@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import PostList from '../../components/PostList'
-import { PostsType } from '../../types/PostsType'
+import PostList from '../../PostList'
+import { PostsType } from '../../../types/PostsType'
 
 const PostIndex: React.FC = () => {
   const [posts, setPosts] = useState<PostsType[]>()

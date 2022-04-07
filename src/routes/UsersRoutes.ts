@@ -1,6 +1,6 @@
-import UserIndex from '../pages/users/UserIndex'
-import UserShow from '../pages/users/UserShow'
-import UserAvatarIndex from '../pages/users/UserAvatarIndex'
+import UserIndex from '../components/pages/users/UserIndex'
+import UserShow from '../components/pages/users/UserShow'
+import UserAvatarIndex from '../components/pages/users/UserAvatarIndex'
 import { RouteType } from '../types/RouteType'
 
 const UsersRoutes: RouteType[] = [

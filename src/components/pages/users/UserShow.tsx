@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, useHistory } from 'react-router-dom'
-import { UsersType } from '../../types/UsersType'
+import { UsersType } from '../../../types/UsersType'
 
 const UserShow: React.FC = () => {
   const { state } = useLocation()

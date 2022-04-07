@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { PostsType } from '../../types/PostsType'
+import { PostsType } from '../../../types/PostsType'
 import { useLocation, useHistory } from 'react-router-dom'
 
 const PostShow: React.FC = () => {

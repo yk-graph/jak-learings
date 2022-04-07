@@ -1,13 +1,8 @@
 import React from 'react'
-import SearchInput from './components/molecules/SearchInput'
+import DefaultLayout from './components/templates/DefaultLayout'
 
 const App: React.FC = () => {
-  return (
-    <>
-      <h1>React PlayGround!!</h1>
-      <SearchInput />
-    </>
-  )
+  return <DefaultLayout />
 }
 
 export default App

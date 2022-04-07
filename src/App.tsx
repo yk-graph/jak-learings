@@ -1,13 +1,11 @@
 import React from 'react'
-import PrimaryButton from './components/atoms/button/PrimaryButton'
-import SecondaryButton from './components/atoms/button/SecondaryButton'
+import SearchInput from './components/molecules/SearchInput'
 
 const App: React.FC = () => {
   return (
     <>
       <h1>React PlayGround!!</h1>
-      <PrimaryButton>test</PrimaryButton>
-      <SecondaryButton>test</SecondaryButton>
+      <SearchInput />
     </>
   )
 }
